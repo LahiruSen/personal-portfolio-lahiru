@@ -3,7 +3,7 @@ name: CICD
 on:
   push:
     branches:
-      - ec2-deployment
+      - task/ec2-deployment
 
 jobs:
   build:
