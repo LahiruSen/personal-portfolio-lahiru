@@ -1,7 +1,16 @@
-FROM node:18.12.1-alpine
-WORKDIR /app
-COPY package*.json .
+# Step 1: Build React App
+FROM node:alpine3.18 as build
+WORKDIR /app 
+COPY package.json .
 RUN yarn install
 COPY . .
-EXPOSE 3000
-CMD ["npm", "start"]
+RUN npm run build
+
+# Step 2: Server With Nginx
+FROM nginx:1.23-alpine
+WORKDIR /usr/share/nginx/html
+RUN rm -rf *
+COPY --from=build /app/build .
+EXPOSE 80
+ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
+
