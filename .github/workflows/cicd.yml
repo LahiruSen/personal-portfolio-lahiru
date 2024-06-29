@@ -23,4 +23,4 @@ jobs:
       - name: Delete Old Container
         run: docker rm -f reactContainer
       - name: Run docker container
-        run: docker run -d -p 443:443 --name reactContainer lahirusens/personal-portfolio-react  
+        run: docker run -d -p 80:80 -p 443:443 --name reactContainer lahirusens/personal-portfolio-react:ssl
