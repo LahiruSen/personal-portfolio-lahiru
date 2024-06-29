@@ -15,16 +15,14 @@ jobs:
         run: docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
       - name: Build Docker Image
         run: docker build -t lahirusens/personal-portfolio-react .
-      - name: Publish image to docker hub
-        run: docker push lahirusens/personal-portfolio-react:latest   
 
   deploy: 
     needs: build
     runs-on: aws-ec2    
     steps:
       - name: Pull image from docker hub
-        run: docker pull lahirusens/personal-portfolio-react:latest 
+        run: docker pull lahirusens/personal-portfolio-react:ssl 
       - name: Delete Old Container
         run: docker rm -f reactContainer
       - name: Run docker container
-        run: docker run -d -p 80:80 --name reactContainer lahirusens/personal-portfolio-react  
+        run: docker run -d -p 443:443 --name reactContainer lahirusens/personal-portfolio-react  

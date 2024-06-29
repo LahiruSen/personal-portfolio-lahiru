@@ -11,6 +11,11 @@ FROM nginx:1.23-alpine
 WORKDIR /usr/share/nginx/html
 RUN rm -rf *
 COPY --from=build /app/build .
-EXPOSE 80
+COPY ./ssl /etc/nginx/ssl
+
+EXPOSE 80 443
+
+COPY nginx.conf /etc/nginx/conf.d/lahirusenevirathne-ssl.conf
+
 ENTRYPOINT [ "nginx", "-g", "daemon off;" ]
 
