@@ -3,13 +3,12 @@ import Mock from "../mock";
 const database = {
   information: {
     name: 'Lahiru Senevirathne',
-    aboutContent: "Passionate and dedicated Senior Software Engineer with a robust background in Computer Science and Engineering, demonstrating a 4-year track record of excellence in full-stack development.",
-    age: '',
+    aboutContent: "I'm a highly motivated Senior Software Engineer with 4+ years of experience crafting robust and scalable software solutions. My primary expertise lies in back-end development using Java and Spring Boot, but I'm also well-versed in front-end development utilizing JavaScript and React.js. Additionally, I possess a strong passion for building data integration pipelines leveraging Apache Beam, Confluent Kafka, and AWS-managed services.",    age: '',
     phone: '',
     nationality: '',
     language: 'English, Sinhala',
     email: 'lahirurc1st@gmail.com',
-    address: 'Melbourne, Australia',
+    address: 'Ultimo NSW 2007, Australia',
     freelanceStatus: '',
     socialLinks: {
       facebook: '',
@@ -167,9 +166,9 @@ const database = {
     }
   ],
   contactInfo: {
-    phoneNumbers: ['+94774002815', '+61390159781'],
+    phoneNumbers: ['+61483966192', '+94774002815'],
     emailAddress: ['lahirurc1st@gmail.com'],
-    address: "Melbourne, Victoria 3000, Australia"
+    address: "Ultimo, NSW 2007, Australia"
   }
 }
 
