@@ -99,7 +99,7 @@ const database = {
         "/images/portfolio-image-2-ecommerce.jpg",
         "/images/portfolio-image-2-ecommerce.jpg"
       ],
-      url: 'http://ecs-alb-1-154341350.us-east-1.elb.amazonaws.com/'
+      url: 'https://ecommerce-app-nodejs-6b70ba0d0f5e.herokuapp.com/'
     }
   ],
   experience: {
